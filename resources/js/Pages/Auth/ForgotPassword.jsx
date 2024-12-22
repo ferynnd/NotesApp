@@ -1,5 +1,4 @@
 import React from 'react';
-import { cn } from "@/lib/utils";
 import {
   Card,
   CardContent,
@@ -12,7 +11,6 @@ import { Label } from "@/components/ui/label";
 import InputError from '@/Components/InputError';
 import PrimaryButton from '@/Components/PrimaryButton';
 import { Head, useForm } from '@inertiajs/react';
-import { Button } from '@/Components/ui/button';
 
 export default function ForgotPassword({ status }) {
     const { data, setData, post, processing, errors } = useForm({
@@ -59,9 +57,9 @@ export default function ForgotPassword({ status }) {
                             </div>
 
                             <div className="mt-4 flex items-center justify-end">
-                                <Button className="ms-4" disabled={processing}>
+                                <PrimaryButton className="ms-4" disabled={processing}>
                                     Email Password Reset Link
-                                </Button>
+                                </PrimaryButton>
                             </div>
                         </form>
                     </CardContent>
