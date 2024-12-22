@@ -1,9 +1,9 @@
-import { Button } from "@/components/ui/button"
 import { Brain, PenLine, Share2, Star, HelpCircle } from 'lucide-react'
 import { Link } from '@inertiajs/react';
 import mySvg from '../images/outbox.svg';
 import mySvgg from '../images/droping.svg';
 import imageApp from '../images/image.png';
+import { Button } from '@/Components/ui/button';
 
 export default function Welcome({ auth}) {
     return (
