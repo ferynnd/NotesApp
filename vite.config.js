@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import react from '@vitejs/plugin-react';
+import path from 'path'; // Tambahkan ini untuk mengatasi error
 
 export default defineConfig({
     plugins: [
@@ -11,9 +12,9 @@ export default defineConfig({
         }),
         react(),
     ],
-    // resolve: {
-    //     alias: {
-    //         '@': '/resources/js',
-    //     },
-    // },
+    resolve: {
+        alias: {
+            '@': path.resolve(__dirname, 'resources/js'),
+        },
+    },
 });
